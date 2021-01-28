@@ -1,10 +1,3 @@
-/*:
-## Methods
- 
- Functions can be defined as part of a type. These functions are called _instance methods_, or just _methods_. `String` has many instance methods, which are used for common operations.
- 
- Here are two string instances:
- */
 let introduction = "It was a dark and stormy night"
 let alternateIntroduction = "Once upon a time"
 /*:

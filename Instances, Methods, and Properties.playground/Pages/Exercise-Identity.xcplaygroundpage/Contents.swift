@@ -10,23 +10,33 @@ Below the declaration of `friendPlans`, update `myPlans` by using the addition o
 Check the values of `myPlans` and `friendPlans`. Are they the same or different?
  */
 // Create your variables here:
-
+var myPlans = "Descansar, assistir filme, estudar"
 // Update `myPlans` here:
-
+var frindPlans = myPlans
+frindPlans += " e dormir"
+print(myPlans)
+print(frindPlans)
 /*:
  - callout(Exercise): 
  Create a function `addDance` that takes a string, appends a phrase about dancing (like `"and then we dance!"` or `"but no dancing"`, according to your taste), and returns the new string.\
  Call the `addDance` function passing in `myPlans`, and assign the result to `friendPlans`.
  */
 // Define and call your function here:
-
+func addDance(phrase: String, dance: Bool) -> String {
+    if dance {
+        return "\(phrase), and then we dance!"
+    } else {
+        return "\(phrase), but no dancing"
+    }
+}
 /*:
  - callout(Exercise): 
  How do you expect `friendPlans` to change? How do you expect `myPlans` to change?\
  Print both instances to to find out.
  */
 // Check your guess by printing here:
-
+addDance(phrase: upDatePlans, dance: true)
+addDance(phrase: upDatePlans, dance: false)
 /*:
   _Copyright © 2020 Apple Inc._
  

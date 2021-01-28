@@ -14,8 +14,9 @@
  To run code for each item in an array, you can use a `for…in` loop. Here’s an array of `friends` that's processed by loop:
  */
 let friends = ["Name", "Name2", "Name3", "Name4", "Name5"]
+friends.count
 
-for friend in friends {
+for friend in friends{
     let sparklyFriend = "✨\(friend)✨"
     print("Hey, \(sparklyFriend), please come to my party on Friday!")
 }
