@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wVz-LV-Rjr">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Jbv-6y-k1f">
+            <objects>
+                <viewController id="wVz-LV-Rjr" customClass="ViewController" customModule="QuestionBot" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bSZ-fy-bZY"/>
+                        <viewControllerLayoutGuide type="bottom" id="YvZ-xJ-Xsa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Xrx-PO-oO0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="9Gu-aH-lRt">
+                                <rect key="frame" x="5" y="44" width="404" height="265"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="e3H-cR-DwP">
+                                        <rect key="frame" x="0.0" y="0.0" width="404" height="60"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clipart1401461" translatesAutoresizingMaskIntoConstraints="NO" id="aS4-Q8-elD">
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="8VT-tG-7Ie"/>
+                                                    <constraint firstAttribute="height" constant="60" id="t7M-bP-PDY"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="conerRadius">
+                                                        <integer key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TF7-r3-cfe">
+                                                <rect key="frame" x="65" y="5" width="339" height="50.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="6ax-cG-Val"/>
+                                                </constraints>
+                                                <string key="text">Olá.  Eu sou o Freed!!   😄
+Como posso te ajudar?</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type your question..." textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Ob-1A-5xc">
+                                        <rect key="frame" x="0.0" y="65" width="404" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="G6Z-qF-kz1"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="send" enablesReturnKeyAutomatically="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="conerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="editingChanged:" destination="wVz-LV-Rjr" eventType="editingChanged" id="hQe-TD-vXL"/>
+                                            <outlet property="delegate" destination="wVz-LV-Rjr" id="8p2-zE-5b2"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SOk-EP-Q9a">
+                                <rect key="frame" x="16" y="812" width="382" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="vHD-Sh-HRm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <state key="normal" title="PERGUNTAR">
+                                    <color key="titleColor" systemColor="systemGray6Color"/>
+                                </state>
+                                <state key="disabled" backgroundImage="disabled"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="askButtonTapped:" destination="wVz-LV-Rjr" eventType="touchUpInside" id="2bL-DB-EKD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Dlr-yR-KnP"/>
+                        <color key="backgroundColor" red="1" green="0.8896304341579313" blue="0.51590188751298938" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Dlr-yR-KnP" firstAttribute="bottom" secondItem="SOk-EP-Q9a" secondAttribute="bottom" id="6kC-fI-VPo"/>
+                            <constraint firstAttribute="trailing" secondItem="9Gu-aH-lRt" secondAttribute="trailing" constant="5" id="G0F-Pq-SxH"/>
+                            <constraint firstItem="SOk-EP-Q9a" firstAttribute="leading" secondItem="Dlr-yR-KnP" secondAttribute="leading" constant="16" id="eFw-CU-wIS"/>
+                            <constraint firstItem="9Gu-aH-lRt" firstAttribute="leading" secondItem="Xrx-PO-oO0" secondAttribute="leading" constant="5" id="ngq-dm-mhQ"/>
+                            <constraint firstItem="9Gu-aH-lRt" firstAttribute="top" secondItem="bSZ-fy-bZY" secondAttribute="bottom" id="q4t-WE-oCK"/>
+                            <constraint firstItem="Dlr-yR-KnP" firstAttribute="trailing" secondItem="SOk-EP-Q9a" secondAttribute="trailing" constant="16" id="zZ7-Pk-kjJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="asY-oA-gKf"/>
+                    <connections>
+                        <outlet property="askButton" destination="SOk-EP-Q9a" id="Giz-q5-vmd"/>
+                        <outlet property="questionField" destination="8Ob-1A-5xc" id="Vda-W6-k92"/>
+                        <outlet property="responseLabel" destination="TF7-r3-cfe" id="Gyr-JD-DHA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ot7-A5-blb" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="776.81159420289862" y="261.83035714285711"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="clipart1401461" width="512" height="512"/>
+        <image name="disabled" width="13.5" height="13.5"/>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
