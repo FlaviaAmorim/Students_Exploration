@@ -8,22 +8,37 @@
  - callout(Exercise): 
  Create an empty array to hold song titles as strings, and use the `append` method to add three or four songs one at a time.
  */
+var music = [String]()
+music.append("Alvo mais que a neve")
+music.append("Aleluia")
+music.append("Sinto fluir")
 
 /*:
  - callout(Exercise): 
  One enthusiastic singer wants to add three songs at once. Create an array holding this one singer's song list and use the `+=` operator to append their whole list to the end of the group's song list.
  */
-
+let fernandinho = ["Yeshua", "Grandes coisas", "Uma nova história"]
+music += fernandinho
+print(music)
 /*:
  - callout(Exercise): 
  Write a `for…in` loop and, for every song title in the array, print an encouraging announcement to let the next singer know that it's their turn.
  */
+//Para imprimir item por item do array music
+for songs in music {
+    print(songs)
+}
 
+//outra maneira
+print("Relacao de musicas:")
+for index in 0..<music.count {
+    print("\(index + 1): \(music[index])")
+}
 /*:
  - callout(Exercise): 
  After the loop has called everyone up to sing, use the `removeAll` method on the song list to clear out all the past songs.
  */
-
+music.removeAll()
 /*:
 [Previous](@previous)  |  page 14 of 18  |  [Next: Exercise: Counting Votes](@next)
  */
