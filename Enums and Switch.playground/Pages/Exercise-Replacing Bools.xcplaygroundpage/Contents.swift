@@ -9,6 +9,10 @@ struct Enemy {
     let speed: Int
     let weapon: Bool
 }
+
+enum Weapon {
+    case none, sword, rubberMallet
+}
 /*:
  As your game has developed, you’ve decided that your enemies might have more than one type of weapon.
 

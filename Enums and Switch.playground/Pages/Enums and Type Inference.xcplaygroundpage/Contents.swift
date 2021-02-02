@@ -6,7 +6,7 @@
  Here’s the `LunchChoice` enum from the previous page. It’s written a little differently. To save space, it includes multiple cases on a single line, separated by commas:
  */
 enum LunchChoice {
-    case pasta, burger, soup
+    case pasta, burger, soup, salad
 }
 /*:
  On the previous page you made an enum instance like this:
@@ -18,6 +18,7 @@ enum LunchChoice {
 var choice: LunchChoice
 //: If Swift already knows what type to expect, you can skip the enum name. Since you’ve already specified the type of `choice`, you can leave out the enum name when assigning a value:
 choice = .burger
+choice = .salad
 //:  - Experiment: Practice assigning other values to `choice` using this shorter dot notation. Notice that the autocompletion menu pops up once you type the period.
 
 /*:

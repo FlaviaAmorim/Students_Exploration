@@ -18,11 +18,15 @@ struct Song {
     let duration: Int
     var rating: Int
 }
+
 //: This step alone isn’t enough to make the `rating` property on every `Song` instance mutable. The struct must also be assigned to a variable:
 var song = Song(title: "No, no, no", artist: "Fizz", duration: 150, rating: 0)
 song.rating
 song.rating = 4
 song.rating
+
+
+//song.title = "xpto"- Irá gerar erro, pois a informacao é imutavel
 /*:
  - Experiment: Change the variable `song` to be a constant. What error does that produce?
 
