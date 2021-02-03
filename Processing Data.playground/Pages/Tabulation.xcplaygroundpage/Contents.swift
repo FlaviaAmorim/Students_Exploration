@@ -24,7 +24,9 @@ tabulator.incrementCount(forValue: "The Fourth Time")
 
 print(tabulator.values)
 //:  - callout(Exercise): Write a loop that iterates through all the tabulated strings (in `tabulator.values`) and prints the count for each one.
-
+for item in tabulator.values {
+    print("\(item): \(tabulator.count(forValue: item))")
+}
 /*:
 [Previous](@previous)  |  page 2 of 11  |  [Next: Counting Shows](@next)
  */

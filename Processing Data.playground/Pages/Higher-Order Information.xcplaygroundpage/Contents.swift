@@ -18,7 +18,9 @@
 var tabulator = Tabulator()
 
 tabulator.incrementCount(forValue: "Ocean Express")
-
+tabulator.incrementCount(forValue: "Ocean Express")
+tabulator.incrementCount(forValue: "Ocean Express")
+tabulator.incrementCount(forValue: "The Fourth Time ")
 print(tabulator.tabulatedValues)
 
 //: [Previous](@previous)  |  page 8 of 11  |  [Next: Least and Most Popular](@next)

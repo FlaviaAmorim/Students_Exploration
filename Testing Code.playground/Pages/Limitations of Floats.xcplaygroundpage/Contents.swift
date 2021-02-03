@@ -17,8 +17,14 @@ func change(for amountGiven: Double, purchasePrice: Double) -> [Denomination] {
     }
 
     // Convert amounts to pennies.
-    let amountInPennies = Int(amountGiven * 100)
-    let purchaseInPennies = Int(purchasePrice * 100)
+//    let amountInPennies = Int(amountGiven * 100)
+//    let purchaseInPennies = Int(purchasePrice * 100)
+    
+    let testeA = amountGiven * 100
+    let testeB = purchasePrice * 100
+    
+    let amountInPennies = testeA.rounded()
+    let purchaseInPennies = testeB.rounded()
     
     // Calculate change in pennies.
     var changeInPennies = amountInPennies - purchaseInPennies
@@ -60,6 +66,7 @@ change(for: 10, purchasePrice: 8.95) // Should be [.one, .nickel]
  The rest of the function uses these values to calculate change. The function itself has no logical errors—it should work for all valid inputs. The problem is that `Double`s don't always work the way you expect them to. If you scroll up to those lines in the function, you might spot the error in the results sidebar. Take a look in the results sidebar for the line below to see it more clearly.
  */
 8.95
+change(for: 10, purchasePrice: 8.75)
 //: Some strange behavior is going on. Due to the limitations of the `Double` type, the `Double` literal 8.95 isn't actually that value when it's represented in the computer. So when you multiply it by 100, the result isn't 895.0, but 894.999.... `Double`s have other limitations as well, such as those that only crop up in addition operations. (These can even fool you by appearing correct in the results sidebar.)
 let a = 0.05
 let b = 0.01
