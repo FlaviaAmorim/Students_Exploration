@@ -62,15 +62,28 @@ var leastPopular: [TabulatedValue] = []
 //  - Find the index of the maximum
 //  - Append the show at that index to the most popular shows array
 //  - Remove the show at that index from the all shows array
+for _ in 1 ... 3 {
+    let maxIndex = indexOfMaximum(from: allShows)
+    mostPopular.append(allShows[maxIndex])
+    allShows.remove(at: maxIndex)
+}
 
 // Print out the most popular shows
+print("Os 3 shows mais populares são: \(mostPopular)")
+
 
 // Loop three times:
 //  - Find the index of the minimum
 //  - Append the show at that index to the least popular shows array
 //  - Remove the show at that index from the all shows array
+for _ in 1 ... 3 {
+    let minIndex = indexOfMinimum(from: allShows)
+    leastPopular.append(allShows[minIndex])
+    allShows.remove(at: minIndex)
+}
+
 
 // Print out the least popular shows
-
+print("Os 3 shows menos populares são: \(leastPopular)")
 
 //: [Previous](@previous)  |  page 9 of 11  |  [Next: Ranking](@next)

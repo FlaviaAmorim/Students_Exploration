@@ -12,7 +12,7 @@
 import Foundation
 
 func passwordIsCorrect(_ password: String) -> Bool {
-    return password == "123"
+    return password == "abc123!@#"
 }
 
 let digits = "0123456789"
@@ -52,7 +52,7 @@ guessPasswordOfThreeCharacters(containing: digits)
 - Which password can be guessed on the first try?
 - Which password requires the most tries before it can be guessed?
  */
-//guessPasswordOfThreeCharacters(containing: digits + lowercaseAlphas)
+guessPasswordOfThreeCharacters(containing: digits + lowercaseAlphas)
 /*:
  Based on the password you choose to set in `checkPassword(_:)` and the order you supply the characters to guess, you can see that—even with just three characters—your playground can run for a very long time before finding a result.
 
@@ -65,7 +65,27 @@ guessPasswordOfThreeCharacters(containing: digits)
  \
  Modify the `passwordIsCorrect(_:)` function to contain a four-character password. Try using your new password-guessing function to see how it affects how long your playground runs before it finds a password. (Hint: you should comment out any existing calls to `guessPasswordOfThreeCharacters` on this page to avoid extraneous work.)
  */
-
+func guessPasswordOfFourCharacters(containing characters: String) {
+    var password: String = "1234"
+    
+    for a in characters {
+        for b in characters {
+            for c in characters {
+                for d in characters {
+                password = String(a) + String(b) + String(c) + String(d)
+                if passwordIsCorrect(password) {
+                    print("Found 4-password: \(password)")
+                    // The return statement below means that the function exits
+                    // early when the password is guessed, rather than executing
+                    // all loops to completion.
+                    return
+                    }
+                }
+            }
+        }
+    }
+}
+guessPasswordOfFourCharacters(containing: digits + lowercaseAlphas)
 /*:
   _Copyright © 2020 Apple Inc._
  

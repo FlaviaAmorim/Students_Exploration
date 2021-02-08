@@ -13,6 +13,23 @@ func hline(x: Int, y: Int, length: Int, color: Color) {
     }
 }
 
+func vline(x: Int, y: Int, length: Int, color: Color) {
+    for i in 0 ... length - 1 {
+        display.setPixel(x: x, y: y + i, color: color)
+    }
+}
+
+hline(x: 10, y: 20, length: 20, color: .yellow)
+hline(x: 10, y: 18, length: 20, color: .yellow)
+hline(x: 10, y: 19, length: 20, color: .yellow)
+hline(x: 10, y: 17, length: 20, color: .yellow)
+hline(x: 10, y: 16, length: 20, color: .yellow)
+hline(x: 10, y: 22, length: 20, color: .yellow)
+hline(x: 10, y: 21, length: 20, color: .yellow)
+hline(x: 10, y: 23, length: 20, color: .yellow)
+hline(x: 10, y: 24, length: 20, color: .yellow)
+hline(x: 10, y: 25, length: 20, color: .yellow)
+vline(x: 10, y: 18, length: 5, color: .yellow)
 /*:
  ### Fill Speed
  

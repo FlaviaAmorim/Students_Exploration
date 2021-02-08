@@ -35,8 +35,85 @@ let punctuation = "!@#$%^&*(),.<>;'`~[]{}\\|/?_-+= "
  
  As a bonus, consider adding more detailed error messages to let the user know exactly which rule they failed to observe.
  */
-let password = "password"
+let password = "p@ssXxxxxxxxxxxxxxxxxx1"
+validPassword(password:password)
 
+//if validPassword(password: password) == true {
+//    print("Sua senha esta correta.")
+//} else {
+//    print("Corrija os erros apontados acima e tente novamente.")
+//}
+//func insecurityPassword (password: String) -> Bool {
+//    if tenMostCommonPasswords.contains(password) {
+//       return true
+//    } else {
+//        return false
+//    }
+//}
+//
+//let password = "p@sswordxxxxxx1"
+//var msgError = String()
+//
+////Primeiras verificacoes
+//if insecurityPassword(password: password) {
+//    msgError += "Essa senha não pode ser usada! Utilize uma senha mais forte"
+//}
+//
+//if password.count < 16 {
+//    msgError += "A senha deve conter pelo menos 16 caracteres"
+//}
+//
+//// Demais verificacoes
+//var numberOfDigits = 0
+//var numberOfPunctuationCharacters = 0
+//var numberOfRegularLetters = 0
+//
+//    for character in password {
+//        if digits.contains(character) {
+//            numberOfDigits += 1
+//        } else if punctuation.contains(character) {
+//            numberOfPunctuationCharacters += 1
+//        } else {
+//            numberOfRegularLetters += 1
+//        }
+//    }
+//
+//        if numberOfDigits == 0 {
+//            msgError += "A senha deve conter pelo menos um digito\n"
+//        }
+//        if numberOfPunctuationCharacters == 0 {
+//            msgError += "A senha deve conter pelo menos um caracter de pontuacao: \(punctuation)\n"
+//        }
+//        if numberOfRegularLetters == 0 {
+//            msgError += "A senha deve conter pelo menos uma letra\n"
+//        }
+//
+//        //Verifica se houve algum erro de verificacao
+//        if msgError.isEmpty {
+//            print("Sua senha foi criada com sucesso")
+//        } else {
+//            print(msgError)
+//        }
+//
+//
+//        //Outra maneira de fazer
+////        if numberOfDigits == 0 {
+////                    print("A senha deve conter pelo menos 1 digito!")
+////                } else if numberOfPunctuationCharacters == 0{
+////                    print("A senha deve conter pelo menos um caracter de pontuacao: \(punctuation)")
+////                } else if numberOfRegularLetters == 0 {
+////                    print("A senha deve conter pelo menos uma letra")
+////                } else {
+////                    print("Sua senha foi criada com sucesso!")
+////                }
+//
+//
+//        //Solucao generica
+////        if numberOfDigits == 0 || numberOfPunctuationCharacters == 0 || numberOfRegularLetters == 0 {
+////            print("Senha invalida, favor revisar!")
+////        } else {
+////            print("Senha cadastrada com sucesso!")
+////        }
 /*:
 [Previous](@previous)  |  page 2 of 5  |  [Next: Advanced Rules](@next)
  */
